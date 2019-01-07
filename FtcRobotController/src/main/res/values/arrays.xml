@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="color">
+        <item>Red</item>
+        <item>Blue</item>
+    </string-array>
+
+    <string-array name="colorAlias">
+        <item>"RED"</item>
+        <item>"BLUE"</item>
+    </string-array>
+    <string-array name="ramp">
+        <item>Near</item>
+        <item>Far</item>
+    </string-array>
+
+    <string-array name="rampAlias">
+        <item>"NEAR"</item>
+        <item>"FAR"</item>
+    </string-array>
+    <string-array name="startPos">
+        <item>Red team, closest to relic slide</item>
+        <item>Red team, not near relic slide</item>
+        <item>Blue team, closest to relic slide</item>
+        <item>Blue team, not near relic slide</item>
+    </string-array>
+
+    <string-array name="startPosAlias">
+        <item>"RED_RELIC"</item>
+        <item>"RED_MIDDLE"</item>
+        <item>"BLUE_RELIC"</item>
+        <item>"BLUE_MIDDLE"</item>
+    </string-array>
+
+    <string-array name="goalPos">
+        <item>Park on mountain</item>
+        <item>Park in parking zone</item>
+        <item>Park behind beacon and hit</item>
+        <item>Park in front of beacon and hit</item>
+        <item>Auxiliary 1</item>
+        <item>Auxiliary 2</item>
+        <item>Auxiliary 3</item>
+        <item>Auxiliary 4</item>
+        <item>Auxiliary 5</item>
+        <item>Auxiliary 6</item>
+        <item>Auxiliary 7</item>
+        <item>Auxiliary 8</item>
+    </string-array>
+
+    <string-array name="goalPosAlias">
+        <item>"MTN"</item>
+        <item>"PARK"</item>
+        <item>"BEACON_BEHIND"</item>
+        <item>"BEACON_INFRONT"</item>
+        <item>"AUX1"</item>
+        <item>"AUX2"</item>
+        <item>"AUX3"</item>
+        <item>"AUX4"</item>
+        <item>"AUX5"</item>
+        <item>"AUX6"</item>
+        <item>"AUX7"</item>
+        <item>"AUX8"</item>
+    </string-array>
+</resources>
