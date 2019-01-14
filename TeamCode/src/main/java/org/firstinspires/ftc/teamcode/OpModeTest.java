@@ -7,9 +7,13 @@ import com.qualcomm.robotcore.hardware.DcMotorController;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.LegacyModule;
 import com.qualcomm.robotcore.hardware.configuration.MotorConfigurationType;
+import com.qualcomm.robotcore.util.ElapsedTime;
 
 @TeleOp(name="OpMode Test", group="TeleOp OpMode")
 public class OpModeTest extends OpMode {
+
+    private ElapsedTime runtime = new ElapsedTime();
+
     DcMotor left_drive;
     DcMotor right_drive;
     // Code to run ONCE when the driver hits INIT
@@ -20,23 +24,26 @@ public class OpModeTest extends OpMode {
 
         left_drive = hardwareMap.dcMotor.get("left_drive");
         right_drive = hardwareMap.dcMotor.get("right_drive");
-        left_drive.setDirection(DcMotorSimple.Direction.FORWARD);
-        right_drive.setDirection(DcMotorSimple.Direction.REVERSE);
+        left_drive.setDirection(DcMotor.Direction.FORWARD);
+        right_drive.setDirection(DcMotor.Direction.REVERSE);
 
+        telemetry.addData("Status", "Initialized");
+        telemetry.update();
     }
 
     // Code to run REPEATEDLY after the driver hits INIT, but before they hit PLAY
-    @Override
-    public void init_loop() {}
+    // @Override
+    // public void init_loop() {}
 
     // Code to run ONCE when the driver hits PLAY
     @Override
-    public void start() {}
+    public void start() {
+        runtime.reset();
+    }
 
     // Code to run REPEATEDLY after the driver hits PLAY but before they hit STOP
     @Override
     public void loop() {
-
         if (this.gamepad1.dpad_up) {
             left_drive.setPower(1);
             right_drive.setPower(1);
@@ -49,8 +56,8 @@ public class OpModeTest extends OpMode {
         }
 
 
+        telemetry.addData("Runtime", runtime.toString());
         telemetry.update();
-
     }
 
     // Code to run ONCE after the driver hits STOP
